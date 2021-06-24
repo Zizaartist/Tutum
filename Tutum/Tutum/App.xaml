@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tutum.App">
+    <Application.Resources>
+        <Style x:Key="ButtonStandart" TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextColor" Value="{DynamicResource WhiteText}"/>
+            <Setter Property="WidthRequest" Value="230"/>
+            <Setter Property="HeightRequest" Value="45"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource Black}"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="TextTransform" Value="None"/>
+        </Style>
+        <Style x:Key="ButtonSmall" TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextColor" Value="{DynamicResource Green}"/>
+            <Setter Property="WidthRequest" Value="80"/>
+            <Setter Property="HeightRequest" Value="20"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource Black}"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="TextTransform" Value="None"/>
+        </Style>
+        <Style x:Key="ButtonTransparent" TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextColor" Value="{DynamicResource WhiteText}"/>
+            <Setter Property="WidthRequest" Value="230"/>
+            <Setter Property="HeightRequest" Value="45"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="CornerRadius" Value="40"/>
+            <Setter Property="TextTransform" Value="None"/>
+        </Style>
+        <Style x:Key="ImageLogo" TargetType="Image">
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="WidthRequest" Value="195"/>
+            <Setter Property="HeightRequest" Value="20"/>
+            <Setter Property="Aspect" Value="AspectFit"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+        <Style x:Key="DefaultEntry" TargetType="Entry">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="PlaceholderColor" Value="{DynamicResource GrayText}"/>
+            <Setter Property="TextColor" Value="{DynamicResource WhiteText}"/>
+        </Style>
+        <Style x:Key="Label14" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextColor" Value="{DynamicResource WhiteText}"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        </Style>
+        <Color x:Key="WhiteText">#F4F3F4</Color>
+        <Color x:Key="Black">#000001</Color>
+        <Color x:Key="GrayText">#747474</Color>
+        <Color x:Key="Background">#212121</Color>
+        <Color x:Key="Red">#D3131F</Color>
+        <Color x:Key="Blue">#5A73C9</Color>
+        <Color x:Key="Green">#44C149</Color>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,31 @@
+﻿<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Tutum.Views.User.Course"
+       xmlns:views1="clr-namespace:Tutum.Views.User.Main"
+       xmlns:views2="clr-namespace:Tutum.Views.User.Profile"
+       x:Class="Tutum.MainPage">
+    <Shell.Resources>
+        <Style TargetType="TabBar">
+            <Setter Property="Shell.TabBarBackgroundColor"
+            Value="{StaticResource Black}" />
+            <Setter Property="Shell.TabBarTitleColor"
+            Value="{StaticResource WhiteText}" />
+            <Setter Property="Shell.TabBarUnselectedColor"
+            Value="{StaticResource GrayText}" />
+        </Style>
+    </Shell.Resources>
+    <TabBar>
+        <Tab Title="Main"
+             Icon="HomeIcon.png">
+            <ShellContent ContentTemplate="{DataTemplate views1:MainForm}" />
+        </Tab>
+        <Tab Title="Course"
+             Icon="ProfileIcon.png">
+            <ShellContent ContentTemplate="{DataTemplate views:CourseForm}" />
+        </Tab>
+        <Tab Title="Profile"
+             Icon="ProfileIcon.png">
+            <ShellContent ContentTemplate="{DataTemplate views2:ProfileForm}" />
+        </Tab>
+    </TabBar>
+</Shell>

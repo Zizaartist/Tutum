@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:vms="clr-namespace:Tutum.ViewModels"
+             x:Class="Tutum.Views.User.Course.CourseFormSub"
+             BackgroundColor="{StaticResource Background}"
+             Shell.BackgroundColor="{StaticResource Black}"
+             Title="{Binding Source={x:Reference Title}, Path=Text}" NavigationPage.HasNavigationBar="True">
+    <ContentPage.BindingContext>
+        <vms:LessonsViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout x:Name="Wrapper">
+            <xct:MediaElement x:Name="mediaElement"
+                              AutoPlay="True"
+                              Source="{Binding VideoLesson1}"
+                              ShowsPlaybackControls="True"
+                              HeightRequest="300"
+                              VerticalOptions="Center"
+                              IsLooping="True"/>
+            <Label Style="{StaticResource Label14}"
+                   Margin="20,0,20,0"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   x:Name="Title"
+                   Text="{Binding TextLesson1}"/>
+            <Label Style="{StaticResource Label14}"
+                   Margin="20,0,20,0"
+                   Text="{Binding Description}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

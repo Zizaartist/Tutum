@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tutum.Views.User.Profile.ProfileForm"
+             BackgroundColor="{StaticResource Background}">
+    <Shell.BackgroundColor>
+        <Color>#000001</Color>
+    </Shell.BackgroundColor>
+    <Shell.TitleView>
+        <Grid>
+            <Image Source="LogoWhite.png"
+                   HeightRequest="20"
+                   WidthRequest="90"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        </Grid>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout VerticalOptions="Start"
+                         Spacing="10"
+                         Padding="20">
+                <Label Style="{StaticResource Label14}"
+                       Text="Name"/>
+                <Entry Style="{StaticResource DefaultEntry}"
+                       Placeholder="Name"/>
+                <Label Style="{StaticResource Label14}"
+                       Text="Phone Number"/>
+                <Entry Style="{StaticResource DefaultEntry}"
+                       Placeholder="Phone"/>
+                <Label Style="{StaticResource Label14}"
+                       Text="Language"/>
+                <Picker Title="Select language"
+                        TitleColor="{StaticResource GrayText}"
+                        TextColor="{StaticResource WhiteText}"
+                        FontSize="16">
+                    <Picker.Items>
+                        <x:String>English</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout VerticalOptions="End"
+                         Spacing="10">
+                <Button Style="{StaticResource ButtonStandart}"
+                        Text="Change Password"
+                        x:Name="ChangePass"
+                        Clicked="ChangePass_Clicked"/>
+                <Button Style="{StaticResource ButtonStandart}"
+                        Text="Save Changes"
+                        x:Name="SaveChanges"
+                        Clicked="SaveChanges_Clicked"/>
+                <Button Style="{StaticResource ButtonTransparent}"
+                        Text="Logout"
+                        x:Name="Logout"
+                        Clicked="Logout_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

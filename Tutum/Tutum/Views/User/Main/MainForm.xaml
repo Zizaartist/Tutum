@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="Tutum.Views.User.Main.MainForm"
+             BackgroundColor="{StaticResource Background}">
+    <Shell.BackgroundColor>
+        <Color>#000001</Color>
+    </Shell.BackgroundColor>
+    <Shell.TitleView>
+        <Grid>
+            <Image Source="LogoWhite.png"
+                   HeightRequest="20"
+                   WidthRequest="90"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        </Grid>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <xct:MediaElement x:Name="mediaElement"
+                              AutoPlay="True"
+                              Source="ms-appx:///TutumTiser.mp4"
+                              ShowsPlaybackControls="True"
+                              HeightRequest="300"
+                              VerticalOptions="Center"
+                              IsLooping="True"/>
+            <Label Style="{StaticResource Label14}"
+                   Text="Tutum Fitness"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   Margin="20,0,20,0"/>
+            <Label Style="{StaticResource Label14}"
+                   Text="The best agility and abs training tools You need only 2 sq.m on the floor and gravity"
+                   FontSize="14"
+                   Margin="20,0,20,20"/>
+            <Button Style="{StaticResource ButtonStandart}"
+                    Text="Buy"
+                    x:Name="Buy"
+                    Clicked="Buy_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

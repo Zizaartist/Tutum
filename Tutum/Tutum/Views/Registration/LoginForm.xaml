@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tutum.Views.Registration.LoginForm"
+             BackgroundColor="{StaticResource Background}"
+             Title="Login"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     Spacing="20"
+                     Padding="20">
+            <Image Style="{StaticResource ImageLogo}"
+                   Source="LogoWhite.png"/>
+            <Entry Style="{StaticResource DefaultEntry}"
+                   Placeholder="Phone"/>
+            <Entry Style="{StaticResource DefaultEntry}"
+                   Placeholder="Password"/>
+            <Button Style="{StaticResource ButtonStandart}"
+                    Text="Login"
+                    x:Name="Login"
+                    Clicked="Login_Clicked"/>
+            <Button Style="{StaticResource ButtonTransparent}"
+                    Text="Registration"
+                    x:Name="Registration"
+                    Clicked="Registration_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
