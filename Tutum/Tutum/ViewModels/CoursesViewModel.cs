@@ -3,11 +3,11 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Tutum.Models;
 using Tutum.StaticValues;
-using TutumAPI.Models;
+using Xamarin.Essentials;
 
 namespace Tutum.ViewModels
 {
@@ -17,27 +17,29 @@ namespace Tutum.ViewModels
 
         public CoursesViewModel()
         {
-            Task.Run(() => GetRemoteData());
+            Task.Run(() => GetRemoteData().ContinueWith(task => 
+            {
+                if (task.IsFaulted)
+                {
+                    HandleError(task.Exception.InnerException);
+                }
+            }));
         }
 
         public async Task GetRemoteData()
         {
-            try
-            {
-                HttpClient client = new HttpClient();
+            Collection.Clear();
 
-                var response = await client.GetAsync($"{ApiStrings.HOST}{ApiStrings.COURSE_CONTROLLER}");
-                response.EnsureSuccessStatusCode();
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", await SecureStorage.GetAsync(StorageKeys.TOKEN));
 
-                var result = await response.Content.ReadAsStringAsync();
-                var tempList = JsonConvert.DeserializeObject<List<Course>>(result);
+            var response = await client.GetAsync($"{ApiStrings.HOST}{ApiStrings.COURSE_CONTROLLER}");
+            response.EnsureSuccessStatusCode();
 
-                Collection.AddRange(tempList);
-            }
-            catch (HttpRequestException e)
-            {
-                HandleError(e);
-            }
+            var result = await response.Content.ReadAsStringAsync();
+            var tempList = JsonConvert.DeserializeObject<List<Course>>(result);
+
+            Collection.AddRange(tempList);
         }
 
         public async Task GetCachedData()

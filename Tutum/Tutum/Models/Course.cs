@@ -1,11 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System.Collections.Generic;
-using Tutum.Models;
 using Tutum.StaticValues;
 
 namespace Tutum.Models
 {
-    public partial class Course
+    public class Course
     {
         public int CourseId { get; set; }
 

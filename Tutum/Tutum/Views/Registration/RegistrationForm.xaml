@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vms="clr-namespace:Tutum.ViewModels"
              x:Class="Tutum.Views.Registration.RegistrationForm"
              BackgroundColor="{StaticResource Background}"
              Title="Login"
-             NavigationPage.HasNavigationBar="True">
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <vms:RegistrationFormViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center"
                      Spacing="20"
@@ -12,17 +16,24 @@
             <Image Style="{StaticResource ImageLogo}"
                    Source="LogoWhite.png"/>
             <Entry Style="{StaticResource DefaultEntry}"
+                   Text="{Binding Phone, Mode=TwoWay}"
+                   Keyboard="Telephone"
                    Placeholder="Phone"/>
             <Entry Style="{StaticResource DefaultEntry}"
+                   Text="{Binding Name, Mode=TwoWay}"
                    Placeholder="Name"/>
             <Entry Style="{StaticResource DefaultEntry}"
+                   Text="{Binding Password, Mode=TwoWay}"
+                   IsPassword="True"
                    Placeholder="Password"/>
             <Entry Style="{StaticResource DefaultEntry}"
+                   Text="{Binding RepeatPassword, Mode=TwoWay}"
+                   IsPassword="True"
                    Placeholder="Repeat password"/>
             <Button Style="{StaticResource ButtonStandart}"
                     Text="Register"
                     x:Name="Register"
-                    Clicked="Register_Clicked"/>
+                    Command="{Binding SMSCommand}"/>
             <Button Style="{StaticResource ButtonTransparent}"
                     Text="Privacy policy"
                     x:Name="PrivacyPolicy"

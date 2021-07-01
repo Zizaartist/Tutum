@@ -3,23 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tutum.Models;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Tutum.Views.User.Course
+namespace Tutum.Views.Registration
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CourseFormSub : ContentPage
+    public partial class RegistrationFinalizeForm : ContentPage
     {
-        public CourseFormSub()
+        public RegistrationFinalizeForm()
         {
             InitializeComponent();
-        }
-
-        private void Next_Clicked(object sender, EventArgs e)
-        {
-
         }
     }
 }

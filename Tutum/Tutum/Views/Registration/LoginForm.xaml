@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vms="clr-namespace:Tutum.ViewModels"
+             xmlns:strres="clr-namespace:Tutum.StaticValues.StringResources"
              x:Class="Tutum.Views.Registration.LoginForm"
              BackgroundColor="{StaticResource Background}"
              Title="Login"
-             NavigationPage.HasNavigationBar="True">
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.BindingContext>
+        <vms:LoginViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center"
                      Spacing="20"
@@ -12,15 +18,18 @@
             <Image Style="{StaticResource ImageLogo}"
                    Source="LogoWhite.png"/>
             <Entry Style="{StaticResource DefaultEntry}"
-                   Placeholder="Phone"/>
+                   Text="{Binding Phone, Mode=TwoWay}"
+                   Placeholder="{x:Static strres:AppResources.R_LoginForm_Phone}"/>
             <Entry Style="{StaticResource DefaultEntry}"
-                   Placeholder="Password"/>
+                   Text="{Binding Password, Mode=TwoWay}"
+                   IsPassword="True"
+                   Placeholder="{x:Static strres:AppResources.R_LoginForm_Password}"/>
             <Button Style="{StaticResource ButtonStandart}"
-                    Text="Login"
+                    Text="{x:Static strres:AppResources.R_LoginForm_Login}"
                     x:Name="Login"
-                    Clicked="Login_Clicked"/>
+                    Command="{Binding AuthorizeCommand}"/>
             <Button Style="{StaticResource ButtonTransparent}"
-                    Text="Registration"
+                    Text="{x:Static strres:AppResources.R_LoginForm_Registration}"
                     x:Name="Registration"
                     Clicked="Registration_Clicked"/>
         </StackLayout>

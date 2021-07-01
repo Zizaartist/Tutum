@@ -1,80 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vms="clr-namespace:Tutum.ViewModels"
              x:Class="Tutum.Views.User.Course.CourseFormDescription"
              BackgroundColor="{StaticResource Background}"
              Shell.BackgroundColor="{StaticResource Black}"
              Title="{Binding Source={x:Reference Title}, Path=Text}" NavigationPage.HasNavigationBar="True">
+    <ContentPage.BindingContext>
+        <vms:LessonsViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout x:Name="Wrapper">
+        <CollectionView ItemsSource="{Binding Collection}"
+                        x:Name="LessonsCollection"
+                        SelectionMode="Single"
+                        SelectionChanged="CollectionView_SelectionChanged">
+            <CollectionView.Header>
                 <Label Style="{StaticResource Label14}"
                        Margin="20,20,20,40"
                        FontSize="16"
                        FontAttributes="Bold"
                        x:Name="Title"
                        Text="{Binding Title}"/>
-                <ImageButton HeightRequest="200"
-                             VerticalOptions="Center"
-                             Source="Upr1.png"
-                             BackgroundColor="Transparent"
-                             x:Name="LessonOne"
-                             Clicked="LessonOne_Clicked"/>
-                <Label Style="{StaticResource Label14}"
-                       Margin="20,0,20,40"
-                       FontAttributes="Bold"
-                       Text="{Binding TextLesson1}"/>
-                <ImageButton HeightRequest="200"
-                             VerticalOptions="Center"
-                             Source="Upr2.png"
-                             BackgroundColor="Transparent"
-                             x:Name="LessonTwo"
-                             Clicked="LessonTwo_Clicked"/>
-                <Label Style="{StaticResource Label14}"
-                       Margin="20,0,20,40"
-                       FontAttributes="Bold"
-                       Text="{Binding TextLesson2}"/>
-                <ImageButton HeightRequest="200"
-                             VerticalOptions="Center"
-                             Source="Upr3.png"
-                             BackgroundColor="Transparent"
-                             x:Name="LessonThree"
-                             Clicked="LessonThree_Clicked"/>
-                <Label Style="{StaticResource Label14}"
-                       Margin="20,0,20,40"
-                       FontAttributes="Bold"
-                       Text="{Binding TextLesson3}"/>
-                <ImageButton HeightRequest="200"
-                             VerticalOptions="Center"
-                             Source="Upr4.png"
-                             BackgroundColor="Transparent"
-                             x:Name="LessonFour"
-                             Clicked="LessonFour_Clicked"/>
-                <Label Style="{StaticResource Label14}"
-                       Margin="20,0,20,40"
-                       FontAttributes="Bold"
-                       Text="{Binding TextLesson4}"/>
-                <ImageButton HeightRequest="200"
-                             VerticalOptions="Center"
-                             Source="Upr5.png"
-                             BackgroundColor="Transparent"
-                             x:Name="LessonFive"
-                             Clicked="LessonFive_Clicked"/>
-                <Label Style="{StaticResource Label14}"
-                       Margin="20,0,20,40"
-                       FontAttributes="Bold"
-                       Text="{Binding TextLesson5}"/>
-                <ImageButton HeightRequest="200"
-                             VerticalOptions="Center"
-                             Source="Upr6.png"
-                             BackgroundColor="Transparent"
-                             x:Name="LessonSix"
-                             Clicked="LessonSix_Clicked"/>
-                <Label Style="{StaticResource Label14}"
-                       Margin="20,0,20,40"
-                       FontAttributes="Bold"
-                       Text="{Binding TextLesson6}"/>
-            </StackLayout>
-        </ScrollView>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <ImageButton HeightRequest="200"
+                                     VerticalOptions="Center"
+                                     Source="{Binding PreviewUrl}"
+                                     BackgroundColor="Transparent"
+                                     Clicked="LessonImage_Clicked"/>
+                        <Label Style="{StaticResource Label14}"
+                               Margin="20,20,20,40"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               x:Name="Title"
+                               Text="{Binding Title}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage.Content>
 </ContentPage>

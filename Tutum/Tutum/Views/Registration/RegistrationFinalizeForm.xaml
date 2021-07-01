@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vms="clr-namespace:Tutum.ViewModels"
+             x:Class="Tutum.Views.Registration.RegistrationFinalizeForm"
+             BackgroundColor="{StaticResource Background}"
+             Title="Login"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.BindingContext>
+        <vms:RegistrationViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     Spacing="20"
+                     Padding="20">
+            <Image Style="{StaticResource ImageLogo}"
+                   Source="LogoWhite.png"/>
+            <Entry Style="{StaticResource DefaultEntry}"
+                   Text="{Binding Code, Mode=TwoWay}"
+                   MaxLength="4"
+                   Keyboard="Numeric"
+                   Placeholder="SMS code"/>
+            <Button Style="{StaticResource ButtonStandart}"
+                    Text="Register"
+                    x:Name="Register"
+                    Command="{Binding RegisterCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

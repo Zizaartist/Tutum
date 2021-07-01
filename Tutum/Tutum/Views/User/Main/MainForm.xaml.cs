@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Tutum.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,12 @@ namespace Tutum.Views.User.Main
         public MainForm()
         {
             InitializeComponent();
+
+            var userVM = DependencyService.Get<UserViewModel>();
+
+            //Если авторизовались - подгрузить данные пользователя с API,
+            //т.к. токен должен присутствовать к этому моменту
+            Task.Run(() => userVM.InitializeCommand.Execute(null)); 
         }
 
         private void Buy_Clicked(object sender, EventArgs e)

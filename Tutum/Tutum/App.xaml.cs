@@ -1,4 +1,7 @@
 ﻿using System;
+using Tutum.Interfaces;
+using Tutum.Services;
+using Tutum.ViewModels;
 using Tutum.Views.Registration;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,6 +13,10 @@ namespace Tutum
         public App()
         {
             InitializeComponent();
+
+            DependencyService.RegisterSingleton<IUserDataService>(new UserDataService());
+            DependencyService.Register<UserViewModel>();
+
             MainPage = new MainPage();
         }
 

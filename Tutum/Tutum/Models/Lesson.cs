@@ -3,8 +3,10 @@ using Tutum.StaticValues;
 
 namespace Tutum.Models
 {
-    public partial class Lesson
+    public class Lesson
     {
+        public int LessonId { get; set; }
+
         public string Title { get; set; }
 
         public string Text { get; set; }

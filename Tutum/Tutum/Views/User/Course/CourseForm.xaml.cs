@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Tutum.Models;
+using Tutum.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,23 +8,32 @@ namespace Tutum.Views.User.Course
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CourseForm : ContentPage
     {
+        private readonly UserViewModel userVM;
+
         public CourseForm()
         {
             InitializeComponent();
+
+            userVM = DependencyService.Get<UserViewModel>();
+            userVM.GetUserDataCommand.Execute(null);
         }
 
-        private void CourseCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void CourseCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.CurrentSelection.Any())
             {
+                var selectedCourse = e.CurrentSelection.LastOrDefault() as Tutum.Models.Course;
                 CourseCollection.SelectedItem = null;
-                if ((e.CurrentSelection.LastOrDefault() as Course).Premium == "Free")
+
+                var isSubscribed = userVM.User?.HasSubscription ?? false;
+
+                if (!(selectedCourse).IsPremiumOnly || isSubscribed)
                 {
-                    Navigation.PushAsync(new CourseFormDescription(e.CurrentSelection.LastOrDefault() as Course));
+                    await Shell.Current.GoToAsync($"{nameof(CourseFormDescription)}?{nameof(LessonsViewModel.CourseId)}={selectedCourse.CourseId}");
                 }
                 else
                 {
-                    DisplayAlert("Tutum", "Please, buy premium account", "Ok");
+                    await DisplayAlert("Tutum", "Please, buy premium account", "Ok");
                 }
             }
         }

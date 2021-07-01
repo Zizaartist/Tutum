@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using Tutum.Views.User.Main;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,12 +15,12 @@ namespace Tutum.Views.Registration
 
         private void Login_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new MainPage();
+            Shell.Current.GoToAsync($"//{nameof(MainForm)}");
         }
 
         private void Registration_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new RegistrationForm());
+            Shell.Current.GoToAsync(nameof(RegistrationForm));
         }
     }
 }

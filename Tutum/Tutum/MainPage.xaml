@@ -3,6 +3,7 @@
        xmlns:views="clr-namespace:Tutum.Views.User.Course"
        xmlns:views1="clr-namespace:Tutum.Views.User.Main"
        xmlns:views2="clr-namespace:Tutum.Views.User.Profile"
+       xmlns:views3="clr-namespace:Tutum.Views.Registration"
        x:Class="Tutum.MainPage">
     <Shell.Resources>
         <Style TargetType="TabBar">
@@ -14,16 +15,24 @@
             Value="{StaticResource GrayText}" />
         </Style>
     </Shell.Resources>
+
+    <ShellItem Route="LoginForm">
+        <ShellContent ContentTemplate="{DataTemplate views3:LoginForm}"/>
+    </ShellItem>
+
     <TabBar>
         <Tab Title="Main"
+             Route="MainForm"
              Icon="HomeIcon.png">
             <ShellContent ContentTemplate="{DataTemplate views1:MainForm}" />
         </Tab>
         <Tab Title="Course"
+             Route="CourseForm"
              Icon="ProfileIcon.png">
             <ShellContent ContentTemplate="{DataTemplate views:CourseForm}" />
         </Tab>
         <Tab Title="Profile"
+             Route="ProfileForm"
              Icon="ProfileIcon.png">
             <ShellContent ContentTemplate="{DataTemplate views2:ProfileForm}" />
         </Tab>

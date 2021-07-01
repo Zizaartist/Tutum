@@ -24,7 +24,7 @@
         <CollectionView x:Name="CourseCollection"
                         SelectionMode="Single"
                         SelectionChanged="CourseCollection_SelectionChanged"
-                        ItemsSource="{Binding Courses}">
+                        ItemsSource="{Binding Collection}">
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Horizontal" />
             </CollectionView.ItemsLayout>
@@ -40,7 +40,7 @@
                                BackgroundColor="{StaticResource Black}">
                             <Grid RowDefinitions="Auto,Auto,Auto">
                                 <Image Style="{StaticResource ImageLogo}"
-                                       Source="{Binding Image}"
+                                       Source="{Binding PreviewUrl}"
                                        HeightRequest="400"
                                        WidthRequest="300"
                                        Aspect="AspectFill"/>
@@ -58,13 +58,26 @@
                                        Margin="20,0,20,0"
                                        Grid.Row="2"/>
                                 <Button Style="{StaticResource ButtonSmall}"
-                                        Text="{Binding Premium}"
-                                        TextColor="{Binding ColorCourse}"
                                         FontSize="12"
                                         Padding="-10"
                                         VerticalOptions="Start"
                                         HorizontalOptions="End"
-                                        Margin="20"/>
+                                        Margin="20">
+                                    <Button.Triggers>
+                                        <DataTrigger TargetType="Button"
+                                                     Binding="{Binding IsPremiumOnly}"
+                                                     Value="True">
+                                            <Setter Property="Text" Value="Премиум"/>
+                                            <Setter Property="TextColor" Value="#D3131F"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Button"
+                                                     Binding="{Binding IsPremiumOnly}"
+                                                     Value="False">
+                                            <Setter Property="Text" Value="Бесплатно"/>
+                                            <Setter Property="TextColor" Value="#44C149"/>
+                                        </DataTrigger>
+                                    </Button.Triggers>
+                                </Button>
                             </Grid>
                         </Frame>
                     </Grid>

@@ -1,10 +1,8 @@
 ﻿using MvvmHelpers;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 using Tutum.Models;
 using Tutum.StaticValues;
@@ -13,19 +11,24 @@ using Xamarin.Forms;
 
 namespace Tutum.ViewModels
 {
-    [QueryProperty(nameof(CourseId), nameof(CourseId))]
-    public class LessonsViewModel : BaseViewModel
+    [QueryProperty(nameof(LessonId), nameof(LessonId))]
+    public class LessonViewModel : BaseViewModel
     {
-        public ObservableRangeCollection<Lesson> Collection { get; } = new ObservableRangeCollection<Lesson>();
-
-        private int courseId;
-        public int CourseId 
+        private Lesson lesson;
+        public Lesson Lesson
         {
-            get => courseId;
+            get => lesson;
+            set { SetProperty(ref lesson, value); }
+        }
+
+        private int lessonId;
+        public int LessonId 
+        {
+            get => lessonId;
             set 
-            {
-                courseId = value;
-                Task.Run(() => GetRemoteData().ContinueWith(task =>
+            { 
+                lessonId = value;
+                Task.Run(() => GetLesson().ContinueWith(task =>
                 {
                     if (task.IsFaulted)
                     {
@@ -35,28 +38,19 @@ namespace Tutum.ViewModels
             }
         }
 
-        public async Task GetRemoteData() 
+        public async Task GetLesson()
         {
-            Collection.Clear();
-
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", await SecureStorage.GetAsync(StorageKeys.TOKEN));
 
-            var response = await client.GetAsync($"{ApiStrings.HOST}{ApiStrings.LESSON_BY_COURSE}{CourseId}");
+            var response = await client.GetAsync($"{ApiStrings.HOST}{ApiStrings.LESSON_CONTROLLER}{LessonId}");
             response.EnsureSuccessStatusCode();
 
             var result = await response.Content.ReadAsStringAsync();
-            var tempList = JsonConvert.DeserializeObject<List<Lesson>>(result);
-
-            Collection.AddRange(tempList);
+            Lesson = JsonConvert.DeserializeObject<Lesson>(result);
         }
 
-        public async Task GetCachedData() 
-        {
-        
-        }
-
-        public void HandleError(Exception e) 
+        public void HandleError(Exception e)
         {
             App.Current.MainPage.DisplayAlert("Error", $"Exception - {e}", "Ok");
         }

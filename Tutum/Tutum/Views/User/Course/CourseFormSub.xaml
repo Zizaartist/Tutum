@@ -8,13 +8,13 @@
              Shell.BackgroundColor="{StaticResource Black}"
              Title="{Binding Source={x:Reference Title}, Path=Text}" NavigationPage.HasNavigationBar="True">
     <ContentPage.BindingContext>
-        <vms:LessonsViewModel/>
+        <vms:LessonViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout x:Name="Wrapper">
             <xct:MediaElement x:Name="mediaElement"
                               AutoPlay="True"
-                              Source="{Binding VideoLesson1}"
+                              Source="{Binding Lesson.VideoUrl}"
                               ShowsPlaybackControls="True"
                               HeightRequest="300"
                               VerticalOptions="Center"
@@ -24,10 +24,10 @@
                    FontSize="16"
                    FontAttributes="Bold"
                    x:Name="Title"
-                   Text="{Binding TextLesson1}"/>
+                   Text="{Binding Lesson.Title}"/>
             <Label Style="{StaticResource Label14}"
                    Margin="20,0,20,0"
-                   Text="{Binding Description}"/>
+                   Text="{Binding Lesson.Text}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
