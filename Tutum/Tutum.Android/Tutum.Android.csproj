@@ -218,23 +218,5 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\K11.png" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\C1L4.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\C1L5.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\C1L6.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\C1L1.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\C1L2.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\C1L3.mp4" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

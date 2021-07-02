@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vms="clr-namespace:Tutum.ViewModels.ChangeNumber"
+             x:Class="Tutum.Views.User.Profile.ChangeNumber.NumberForm"
+             BackgroundColor="{StaticResource Background}"
+             Title="Changing phone number"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.BindingContext>
+        <vms:NumberViewModel/>
+    </ContentPage.BindingContext>
+    <Shell.BackgroundColor>
+        <Color>#000001</Color>
+    </Shell.BackgroundColor>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     Spacing="20"
+                     Padding="20">
+            <Entry Style="{StaticResource DefaultEntry}"
+                   Text="{Binding NewNumber, Mode=TwoWay}"
+                   Keyboard="Telephone"
+                   Placeholder="New phone number"/>
+            <Button Style="{StaticResource ButtonStandart}"
+                    Text="Send validation SMS"
+                    Command="{Binding SendSMSCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

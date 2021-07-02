@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Tutum.StaticValues;
 using Tutum.Views.Registration;
+using Tutum.Views.User.Profile.ChangeNumber;
+using Tutum.Views.User.Profile.ChangePassword;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -23,17 +25,18 @@ namespace Tutum.Views.User.Profile
         {
             base.OnAppearing();
 
+            //Триггерим получение данных пользователя из сервиса каждый раз, при появлении на экране
             ViewModel.GetUserDataCommand.Execute(null);
         }
 
-        private void ChangePass_Clicked(object sender, EventArgs e)
+        private async void ChangePass_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Tutum", "Sorry, Profile is not available in demo version", "Ok");
+            await Shell.Current.GoToAsync(nameof(PasswordForm));
         }
 
-        private void SaveChanges_Clicked(object sender, EventArgs e)
+        private async void ChangePhone_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Tutum", "Sorry, Profile is not available in demo version", "Ok");
+            await Shell.Current.GoToAsync(nameof(NumberForm));
         }
 
         private void Logout_Clicked(object sender, EventArgs e)

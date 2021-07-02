@@ -9,6 +9,9 @@
     <ContentPage.BindingContext>
         <vms:RegistrationFormViewModel/>
     </ContentPage.BindingContext>
+    <Shell.BackgroundColor>
+        <Color>#000001</Color>
+    </Shell.BackgroundColor>
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center"
                      Spacing="20"

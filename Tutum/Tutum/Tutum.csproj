@@ -25,6 +25,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\User\Profile\ChangeNumber\NumberSmsForm.xaml.cs">
+      <DependentUpon>NumberSmsForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\User\Profile\ChangePassword\PasswordSmsForm.xaml.cs">
+      <DependentUpon>PasswordSmsForm.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +57,18 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\User\Main\MainForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\User\Profile\ChangeNumber\NumberForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\User\Profile\ChangeNumber\NumberSmsForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\User\Profile\ChangePassword\PasswordForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\User\Profile\ChangePassword\PasswordSmsForm.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\User\Profile\ProfileForm.xaml">

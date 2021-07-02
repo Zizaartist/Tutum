@@ -43,7 +43,7 @@ namespace Tutum.StaticValues
         /// </summary>
         public const string AUTH_REGISTER = "api/Auth/Register/";
         /// <summary>
-        /// POST: api/Auth/SmsCheck/?phone={phone}
+        /// POST: api/Auth/SmsCheck/?phone={phone}&registrationCheck=True
         /// </summary>
         public const string AUTH_SMS_CHECK = "api/Auth/SmsCheck/";
         /// <summary>
@@ -59,6 +59,14 @@ namespace Tutum.StaticValues
         /// GET: api/Users
         /// </summary>
         public const string USERS_CONTROLLER = "api/Users/";
+        /// <summary>
+        /// PUT: api/Users/ChangeNumber/?newNumber={newNumber}&code={code}
+        /// </summary>
+        public const string USERS_CHANGE_PHONE = "api/Users/ChangeNumber/";
+        /// <summary>
+        /// PUT: api/Users/ChangePassword/?newPassword={newPassword}&code={code}
+        /// </summary>
+        public const string USERS_CHANGE_PASSWORD = "api/Users/ChangePassword/";
 
         #endregion user
     }

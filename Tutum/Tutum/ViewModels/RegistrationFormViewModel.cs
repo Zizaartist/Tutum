@@ -70,7 +70,7 @@ namespace Tutum.ViewModels
 
             HttpClient client = new HttpClient();
 
-            var response = await client.PostAsync($"{ApiStrings.HOST}{ApiStrings.AUTH_SMS_CHECK}?phone={Phone}", null);
+            var response = await client.PostAsync($"{ApiStrings.HOST}{ApiStrings.AUTH_SMS_CHECK}?phone={Phone}&registrationCheck=True", null);
             if (response.IsSuccessStatusCode)
             {
                 await Shell.Current.GoToAsync($"{nameof(RegistrationFinalizeForm)}?{nameof(RegistrationViewModel.Phone)}={Phone}&{nameof(RegistrationViewModel.Name)}={Name}&{nameof(RegistrationViewModel.Password)}={Password}");
