@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tutum.Models;
 using Tutum.StaticValues;
+using Tutum.StaticValues.StringResources;
 using Tutum.Views.Registration;
 using Xamarin.Forms;
 
@@ -70,7 +71,7 @@ namespace Tutum.ViewModels
 
             HttpClient client = new HttpClient();
 
-            var response = await client.PostAsync($"{ApiStrings.HOST}{ApiStrings.AUTH_SMS_CHECK}?phone={Phone}&registrationCheck=True", null);
+            var response = await client.PostAsync($"{ApiStrings.HOST}{ApiStrings.AUTH_SMS_CHECK}?phone={Phone}&registrationCheck=true", null);
             if (response.IsSuccessStatusCode)
             {
                 await Shell.Current.GoToAsync($"{nameof(RegistrationFinalizeForm)}?{nameof(RegistrationViewModel.Phone)}={Phone}&{nameof(RegistrationViewModel.Name)}={Name}&{nameof(RegistrationViewModel.Password)}={Password}");
@@ -80,17 +81,17 @@ namespace Tutum.ViewModels
                 var result = await response.Content.ReadAsStringAsync();
                 var error = JsonConvert.DeserializeObject<ErrorModel>(result);
 
-                await Shell.Current.DisplayAlert("Error", error.errorText, "Ok");
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, error.errorText, "Ok");
             }
             else
             {
-                await Shell.Current.DisplayAlert("Error", "Unhandled exception", "Ok");
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, AppResources.Alert_Error_NetworkException, "Ok");
             }
         }
 
         private void HandleException(Exception e)
         {
-            Shell.Current.DisplayAlert("Error", $"Unhandled exception - {e}", "Ok");
+            Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, $"{AppResources.Alert_Error_UnhandledException} - {e}", "Ok");
         }
     }
 }

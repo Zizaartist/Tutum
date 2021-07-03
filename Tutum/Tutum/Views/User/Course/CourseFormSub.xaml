@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:vms="clr-namespace:Tutum.ViewModels"
+             xmlns:strres="clr-namespace:Tutum.StaticValues.StringResources"
              x:Class="Tutum.Views.User.Course.CourseFormSub"
              BackgroundColor="{StaticResource Background}"
              Shell.BackgroundColor="{StaticResource Black}"
-             Title="{Binding Source={x:Reference Title}, Path=Text}" NavigationPage.HasNavigationBar="True">
+             Title="{Binding Source={x:Reference Title}, Path=Text}">
     <ContentPage.BindingContext>
         <vms:LessonViewModel/>
     </ContentPage.BindingContext>

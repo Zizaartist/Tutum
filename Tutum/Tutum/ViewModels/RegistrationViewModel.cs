@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tutum.Models;
 using Tutum.StaticValues;
+using Tutum.StaticValues.StringResources;
 using Tutum.Views.User.Main;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -80,17 +81,17 @@ namespace Tutum.ViewModels
                 var result = await response.Content.ReadAsStringAsync();
                 var error = JsonConvert.DeserializeObject<ErrorModel>(result);
 
-                await Shell.Current.DisplayAlert("Error", error.errorText, "Ok");
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, error.errorText, "Ok");
             }
             else 
             {
-                await Shell.Current.DisplayAlert("Error", "Unhandled exception", "Ok");
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, AppResources.Alert_Error_NetworkException, "Ok");
             }
         }
 
         private void HandleException(Exception e) 
         {
-            Shell.Current.DisplayAlert("Error", $"Exception - {e}", "Ok");
+            Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, $"{AppResources.Alert_Error_UnhandledException} - {e}", "Ok");
         }
     }
 }

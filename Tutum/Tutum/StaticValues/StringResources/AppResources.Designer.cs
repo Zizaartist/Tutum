@@ -61,6 +61,51 @@ namespace Tutum.StaticValues.StringResources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Network error occured.
+        /// </summary>
+        public static string Alert_Error_NetworkException {
+            get {
+                return ResourceManager.GetString("Alert:Error:NetworkException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Error.
+        /// </summary>
+        public static string Alert_Error_Title {
+            get {
+                return ResourceManager.GetString("Alert:Error:Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Unexpected error occured.
+        /// </summary>
+        public static string Alert_Error_UnhandledException {
+            get {
+                return ResourceManager.GetString("Alert:Error:UnhandledException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Attention.
+        /// </summary>
+        public static string Alert_Warning_Title {
+            get {
+                return ResourceManager.GetString("Alert:Warning:Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Invalid login and/or password.
+        /// </summary>
+        public static string R_LoginForm_Error_InvalidCredentials {
+            get {
+                return ResourceManager.GetString("R/LoginForm:Error:InvalidCredentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Login.
         /// </summary>
         public static string R_LoginForm_Login {
@@ -93,6 +138,384 @@ namespace Tutum.StaticValues.StringResources {
         public static string R_LoginForm_Registration {
             get {
                 return ResourceManager.GetString("R/LoginForm:Registration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Login.
+        /// </summary>
+        public static string R_LoginForm_Title {
+            get {
+                return ResourceManager.GetString("R/LoginForm:Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Name.
+        /// </summary>
+        public static string R_RegistrationForm_Name {
+            get {
+                return ResourceManager.GetString("R/RegistrationForm:Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Password.
+        /// </summary>
+        public static string R_RegistrationForm_Password {
+            get {
+                return ResourceManager.GetString("R/RegistrationForm:Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Phone.
+        /// </summary>
+        public static string R_RegistrationForm_Phone {
+            get {
+                return ResourceManager.GetString("R/RegistrationForm:Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Privacy policy.
+        /// </summary>
+        public static string R_RegistrationForm_PrivacyPolicy {
+            get {
+                return ResourceManager.GetString("R/RegistrationForm:PrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Repeat password.
+        /// </summary>
+        public static string R_RegistrationForm_RepeatPassword {
+            get {
+                return ResourceManager.GetString("R/RegistrationForm:RepeatPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Submit.
+        /// </summary>
+        public static string R_RegistrationForm_Submit {
+            get {
+                return ResourceManager.GetString("R/RegistrationForm:Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Registration.
+        /// </summary>
+        public static string R_RegistrationForm_Title {
+            get {
+                return ResourceManager.GetString("R/RegistrationForm:Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на SMS code.
+        /// </summary>
+        public static string R_RegistratonFinalizeForm_SmsCode {
+            get {
+                return ResourceManager.GetString("R/RegistratonFinalizeForm:SmsCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Finish registration.
+        /// </summary>
+        public static string R_RegistratonFinalizeForm_Submit {
+            get {
+                return ResourceManager.GetString("R/RegistratonFinalizeForm:Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Finishing registration.
+        /// </summary>
+        public static string R_RegistratonFinalizeForm_Title {
+            get {
+                return ResourceManager.GetString("R/RegistratonFinalizeForm:Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Course.
+        /// </summary>
+        public static string Shell_Course {
+            get {
+                return ResourceManager.GetString("Shell:Course", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Main.
+        /// </summary>
+        public static string Shell_Main {
+            get {
+                return ResourceManager.GetString("Shell:Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Profile.
+        /// </summary>
+        public static string Shell_Profile {
+            get {
+                return ResourceManager.GetString("Shell:Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Free.
+        /// </summary>
+        public static string U_C_CourseForm_Free {
+            get {
+                return ResourceManager.GetString("U/C/CourseForm:Free", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Premium.
+        /// </summary>
+        public static string U_C_CourseForm_Premium {
+            get {
+                return ResourceManager.GetString("U/C/CourseForm:Premium", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Please, buy premium account.
+        /// </summary>
+        public static string U_C_CourseForm_Warning_Premium {
+            get {
+                return ResourceManager.GetString("U/C/CourseForm:Warning:Premium", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Buy.
+        /// </summary>
+        public static string U_M_MainForm_Buy {
+            get {
+                return ResourceManager.GetString("U/M/MainForm:Buy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The best agility and abs training tools You need only 2 sq.m on the floor and gravity.
+        /// </summary>
+        public static string U_M_MainForm_DescriptionLabel {
+            get {
+                return ResourceManager.GetString("U/M/MainForm:DescriptionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Tutum Fitness.
+        /// </summary>
+        public static string U_M_MainForm_TitleLabel {
+            get {
+                return ResourceManager.GetString("U/M/MainForm:TitleLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на New phone number.
+        /// </summary>
+        public static string U_P_CN_NumberForm_Phone {
+            get {
+                return ResourceManager.GetString("U/P/CN/NumberForm:Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Send validation SMS.
+        /// </summary>
+        public static string U_P_CN_NumberForm_Submit {
+            get {
+                return ResourceManager.GetString("U/P/CN/NumberForm:Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Changing phone number.
+        /// </summary>
+        public static string U_P_CN_NumberForm_Title {
+            get {
+                return ResourceManager.GetString("U/P/CN/NumberForm:Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на SMS code.
+        /// </summary>
+        public static string U_P_CN_NumberSmsForm_Code {
+            get {
+                return ResourceManager.GetString("U/P/CN/NumberSmsForm:Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Change phone number.
+        /// </summary>
+        public static string U_P_CN_NumberSmsForm_Submit {
+            get {
+                return ResourceManager.GetString("U/P/CN/NumberSmsForm:Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Changing phone number.
+        /// </summary>
+        public static string U_P_CN_NumberSmsForm_Title {
+            get {
+                return ResourceManager.GetString("U/P/CN/NumberSmsForm:Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на New password.
+        /// </summary>
+        public static string U_P_CP_PasswordForm_Password {
+            get {
+                return ResourceManager.GetString("U/P/CP/PasswordForm:Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Password repeated.
+        /// </summary>
+        public static string U_P_CP_PasswordForm_PasswordRepeated {
+            get {
+                return ResourceManager.GetString("U/P/CP/PasswordForm:PasswordRepeated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Send SMS.
+        /// </summary>
+        public static string U_P_CP_PasswordForm_Submit {
+            get {
+                return ResourceManager.GetString("U/P/CP/PasswordForm:Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Changing Password.
+        /// </summary>
+        public static string U_P_CP_PasswordForm_Title {
+            get {
+                return ResourceManager.GetString("U/P/CP/PasswordForm:Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на SMS code.
+        /// </summary>
+        public static string U_P_CP_PasswordSMSForm_Code {
+            get {
+                return ResourceManager.GetString("U/P/CP/PasswordSMSForm:Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Change password.
+        /// </summary>
+        public static string U_P_CP_PasswordSMSForm_Submit {
+            get {
+                return ResourceManager.GetString("U/P/CP/PasswordSMSForm:Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Changing Password.
+        /// </summary>
+        public static string U_P_CP_PasswordSMSForm_Title {
+            get {
+                return ResourceManager.GetString("U/P/CP/PasswordSMSForm:Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Language.
+        /// </summary>
+        public static string U_P_ProfileForm_LanguageLabel {
+            get {
+                return ResourceManager.GetString("U/P/ProfileForm:LanguageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Select language.
+        /// </summary>
+        public static string U_P_ProfileForm_LanguagePicker {
+            get {
+                return ResourceManager.GetString("U/P/ProfileForm:LanguagePicker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Logout.
+        /// </summary>
+        public static string U_P_ProfileForm_Logout {
+            get {
+                return ResourceManager.GetString("U/P/ProfileForm:Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Name.
+        /// </summary>
+        public static string U_P_ProfileForm_NameLabel {
+            get {
+                return ResourceManager.GetString("U/P/ProfileForm:NameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Name.
+        /// </summary>
+        public static string U_P_ProfileForm_NamePlaceholder {
+            get {
+                return ResourceManager.GetString("U/P/ProfileForm:NamePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Change Password.
+        /// </summary>
+        public static string U_P_ProfileForm_Password {
+            get {
+                return ResourceManager.GetString("U/P/ProfileForm:Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Change Phone Number.
+        /// </summary>
+        public static string U_P_ProfileForm_PhoneButton {
+            get {
+                return ResourceManager.GetString("U/P/ProfileForm:PhoneButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Phone Number.
+        /// </summary>
+        public static string U_P_ProfileForm_PhoneLabel {
+            get {
+                return ResourceManager.GetString("U/P/ProfileForm:PhoneLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Phone.
+        /// </summary>
+        public static string U_P_ProfileForm_PhonePlaceholder {
+            get {
+                return ResourceManager.GetString("U/P/ProfileForm:PhonePlaceholder", resourceCulture);
             }
         }
     }

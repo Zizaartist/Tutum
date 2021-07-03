@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Tutum.StaticValues.StringResources;
 using Tutum.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -33,7 +34,7 @@ namespace Tutum.Views.User.Course
                 }
                 else
                 {
-                    await DisplayAlert("Tutum", "Please, buy premium account", "Ok");
+                    await DisplayAlert(AppResources.Alert_Warning_Title, AppResources.U_C_CourseForm_Warning_Premium, "Ok");
                 }
             }
         }

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vms="clr-namespace:Tutum.ViewModels"
+             xmlns:strres="clr-namespace:Tutum.StaticValues.StringResources"
              x:Class="Tutum.Views.User.Profile.ProfileForm"
              BackgroundColor="{StaticResource Background}">
     <ContentPage.BindingContext>
@@ -26,40 +27,35 @@
                          Spacing="10"
                          Padding="20">
                 <Label Style="{StaticResource Label14}"
-                       Text="Name"/>
+                       Text="{x:Static strres:AppResources.U_P_ProfileForm_NameLabel}"/>
                 <Entry Style="{StaticResource DefaultEntry}"
                        Text="{Binding User.Name, Mode=TwoWay}"
-                       Placeholder="Name"/>
+                       Placeholder="{x:Static strres:AppResources.U_P_ProfileForm_NamePlaceholder}"/>
                 <Label Style="{StaticResource Label14}"
-                       Text="Phone Number"/>
+                       Text="{x:Static strres:AppResources.U_P_ProfileForm_PhoneLabel}"/>
                 <Entry Style="{StaticResource DefaultEntry}"
                        Text="{Binding User.Phone, Mode=TwoWay}"
-                       Placeholder="Phone"/>
+                       Placeholder="{x:Static strres:AppResources.U_P_ProfileForm_PhonePlaceholder}"/>
                 <Label Style="{StaticResource Label14}"
-                       Text="Language"/>
-                <Picker Title="Select language"
+                       Text="{x:Static strres:AppResources.U_P_ProfileForm_LanguageLabel}"/>
+                <Picker Title="{x:Static strres:AppResources.U_P_ProfileForm_LanguagePicker}"
                         TitleColor="{StaticResource GrayText}"
                         TextColor="{StaticResource WhiteText}"
-                        FontSize="16">
-                    <Picker.Items>
-                        <x:String>English</x:String>
-                        <x:String>Русский</x:String>
-                    </Picker.Items>
+                        SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}"
+                        FontSize="16"
+                        ItemsSource="{x:Static strres:AvailableLanguages.Languages}">
                 </Picker>
             </StackLayout>
             <StackLayout VerticalOptions="End"
                          Spacing="10">
                 <Button Style="{StaticResource ButtonStandart}"
-                        Text="Change Password"
-                        x:Name="ChangePass"
+                        Text="{x:Static strres:AppResources.U_P_ProfileForm_Password}"
                         Clicked="ChangePass_Clicked"/>
                 <Button Style="{StaticResource ButtonStandart}"
-                        Text="Change Phone Number"
-                        x:Name="ChangePhone"
+                        Text="{x:Static strres:AppResources.U_P_ProfileForm_PhoneButton}"
                         Clicked="ChangePhone_Clicked"/>
                 <Button Style="{StaticResource ButtonTransparent}"
-                        Text="Logout"
-                        x:Name="Logout"
+                        Text="{x:Static strres:AppResources.U_P_ProfileForm_Logout}"
                         Clicked="Logout_Clicked"/>
             </StackLayout>
         </Grid>

@@ -5,9 +5,8 @@
              xmlns:strres="clr-namespace:Tutum.StaticValues.StringResources"
              x:Class="Tutum.Views.Registration.LoginForm"
              BackgroundColor="{StaticResource Background}"
-             Title="Login"
-             NavigationPage.HasNavigationBar="False"
-             NavigationPage.HasBackButton="False">
+             Title="{x:Static strres:AppResources.R_LoginForm_Title}"
+             Shell.FlyoutBehavior="Disabled">
     <ContentPage.BindingContext>
         <vms:LoginViewModel/>
     </ContentPage.BindingContext>

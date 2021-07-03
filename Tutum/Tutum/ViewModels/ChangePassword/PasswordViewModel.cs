@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Tutum.Interfaces;
 using Tutum.StaticValues;
+using Tutum.StaticValues.StringResources;
 using Tutum.Views.User.Profile.ChangePassword;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -69,7 +70,7 @@ namespace Tutum.ViewModels.ChangePassword
 
         private void HandleError(Exception e)
         {
-            Shell.Current.DisplayAlert("Error", $"UnhandledException - {e}", "Ok");
+            Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, $"{AppResources.Alert_Error_UnhandledException} - {e}", "Ok");
         }
     }
 }

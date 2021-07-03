@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vms="clr-namespace:Tutum.ViewModels"
+             xmlns:strres="clr-namespace:Tutum.StaticValues.StringResources"
              x:Class="Tutum.Views.Registration.RegistrationFinalizeForm"
              BackgroundColor="{StaticResource Background}"
-             Title="Login"
-             NavigationPage.HasNavigationBar="False"
-             NavigationPage.HasBackButton="False">
+             Title="{x:Static strres:AppResources.R_RegistratonFinalizeForm_Title}"
+             Shell.FlyoutBehavior="Disabled">
     <ContentPage.BindingContext>
         <vms:RegistrationViewModel/>
     </ContentPage.BindingContext>
@@ -23,10 +23,9 @@
                    Text="{Binding Code, Mode=TwoWay}"
                    MaxLength="4"
                    Keyboard="Numeric"
-                   Placeholder="SMS code"/>
+                   Placeholder="{x:Static strres:AppResources.R_RegistratonFinalizeForm_SmsCode}"/>
             <Button Style="{StaticResource ButtonStandart}"
-                    Text="Register"
-                    x:Name="Register"
+                    Text="{x:Static strres:AppResources.R_RegistratonFinalizeForm_Submit}"
                     Command="{Binding RegisterCommand}"/>
         </StackLayout>
     </ContentPage.Content>

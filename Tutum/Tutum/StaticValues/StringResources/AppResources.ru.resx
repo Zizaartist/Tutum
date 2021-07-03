@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,78 +59,227 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="R/LoginForm:Login" xml:space="preserve">
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="R/LoginForm:Login" xml:space="preserve">
     <value>Логин</value>
     <comment>Text on button</comment>
   </data>
-  <data name="R/LoginForm:Password" xml:space="preserve">
+	<data name="R/LoginForm:Password" xml:space="preserve">
     <value>Пароль</value>
     <comment>Placeholder</comment>
   </data>
-  <data name="R/LoginForm:Phone" xml:space="preserve">
+	<data name="R/LoginForm:Phone" xml:space="preserve">
     <value>Мобильный номер</value>
     <comment>Placeholder</comment>
   </data>
-  <data name="R/LoginForm:Registration" xml:space="preserve">
+	<data name="R/LoginForm:Registration" xml:space="preserve">
     <value>Регистрация</value>
     <comment>Text on button</comment>
   </data>
+	<data name="R/LoginForm:Title" xml:space="preserve">
+    <value>Авторизация</value>
+    <comment>Text on navigation bar</comment>
+  </data>
+	<data name="R/RegistrationForm:Name" xml:space="preserve">
+    <value>Имя</value>
+    <comment>Placeholder</comment>
+  </data>
+	<data name="R/RegistrationForm:Password" xml:space="preserve">
+    <value>Пароль</value>
+    <comment>Placeholder</comment>
+  </data>
+	<data name="R/RegistrationForm:Phone" xml:space="preserve">
+    <value>Номер телефона</value>
+    <comment>Placeholder</comment>
+  </data>
+	<data name="R/RegistrationForm:PrivacyPolicy" xml:space="preserve">
+    <value>Политика конфиденциальности</value>
+    <comment>Text link</comment>
+  </data>
+	<data name="R/RegistrationForm:RepeatPassword" xml:space="preserve">
+    <value>Повтор пароля</value>
+    <comment>Placeholder</comment>
+  </data>
+	<data name="R/RegistrationForm:Submit" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+    <comment>Text on button</comment>
+  </data>
+	<data name="R/RegistrationForm:Title" xml:space="preserve">
+    <value>Регистрация</value>
+    <comment>Text on navigation bar</comment>
+  </data>
+	<data name="R/RegistratonFinalizeForm:SmsCode" xml:space="preserve">
+		<value>СМС код</value>
+	</data>
+	<data name="R/RegistratonFinalizeForm:Submit" xml:space="preserve">
+		<value>Завершить регистрацию</value>
+	</data>
+	<data name="R/RegistratonFinalizeForm:Title" xml:space="preserve">
+		<value>Завершение регистрации</value>
+	</data>
+	<data name="Alert:Error:Title" xml:space="preserve">
+		<value>Ошибка</value>
+	</data>
+	<data name="R/LoginForm:Error:InvalidCredentials" xml:space="preserve">
+		<value>Неверный логин и/или пароль</value>
+	</data>
+	<data name="Alert:Error:NetworkException" xml:space="preserve">
+		<value>Возникла сетевая ошибка</value>
+	</data>
+	<data name="Alert:Error:UnhandledException" xml:space="preserve">
+		<value>Возникла непредвиденная ошибка</value>
+	</data>
+	<data name="Alert:Warning:Title" xml:space="preserve">
+		<value>Внимание</value>
+	</data>
+	<data name="U/M/MainForm:TitleLabel" xml:space="preserve">
+		<value>Tutum Fitness</value>
+	</data>
+	<data name="U/M/MainForm:DescriptionLabel" xml:space="preserve">
+		<value>(Google tr.) Лучшие инструменты для тренировки ловкости и пресса. Вам понадобится всего 2 кв.м на полу и сила тяжести.</value>
+	</data>
+	<data name="U/M/MainForm:Buy" xml:space="preserve">
+		<value>Купить</value>
+	</data>
+	<data name="Shell:Main" xml:space="preserve">
+		<value>Главная</value>
+	</data>
+	<data name="Shell:Course" xml:space="preserve">
+		<value>Курсы</value>
+	</data>
+	<data name="Shell:Profile" xml:space="preserve">
+		<value>Профиль</value>
+	</data>
+	<data name="U/P/ProfileForm:NameLabel" xml:space="preserve">
+		<value>Имя</value>
+	</data>
+	<data name="U/P/ProfileForm:NamePlaceholder" xml:space="preserve">
+		<value>Имя</value>
+	</data>
+	<data name="U/P/ProfileForm:PhoneLabel" xml:space="preserve">
+		<value>Мобильный номер</value>
+	</data>
+	<data name="U/P/ProfileForm:PhonePlaceholder" xml:space="preserve">
+		<value>Мобильный номер</value>
+	</data>
+	<data name="U/P/ProfileForm:LanguageLabel" xml:space="preserve">
+		<value>Язык</value>
+	</data>
+	<data name="U/P/ProfileForm:LanguagePicker" xml:space="preserve">
+		<value>Выберите язык</value>
+	</data>
+	<data name="U/P/ProfileForm:Password" xml:space="preserve">
+		<value>Изменить пароль</value>
+	</data>
+	<data name="U/P/ProfileForm:PhoneButton" xml:space="preserve">
+		<value>Изменить номер</value>
+	</data>
+	<data name="U/P/ProfileForm:Logout" xml:space="preserve">
+		<value>Выйти</value>
+	</data>
+	<data name="U/P/CN/NumberForm:Title" xml:space="preserve">
+		<value>Смена мобильного номера</value>
+	</data>
+	<data name="U/P/CN/NumberForm:Phone" xml:space="preserve">
+		<value>Новый номер</value>
+	</data>
+	<data name="U/P/CN/NumberForm:Submit" xml:space="preserve">
+		<value>Отправить СМС</value>
+	</data>
+	<data name="U/P/CN/NumberSmsForm:Title" xml:space="preserve">
+		<value>Смена мобильного номера</value>
+	</data>
+	<data name="U/P/CN/NumberSmsForm:Code" xml:space="preserve">
+		<value>СМС код</value>
+	</data>
+	<data name="U/P/CN/NumberSmsForm:Submit" xml:space="preserve">
+		<value>Изменить мобильный номер</value>
+	</data>
+	<data name="U/P/CP/PasswordForm:Title" xml:space="preserve">
+		<value>Смена пароля</value>
+	</data>
+	<data name="U/P/CP/PasswordForm:Password" xml:space="preserve">
+		<value>Новый пароль</value>
+	</data>
+	<data name="U/P/CP/PasswordForm:PasswordRepeated" xml:space="preserve">
+		<value>Повтор пароля</value>
+	</data>
+	<data name="U/P/CP/PasswordForm:Submit" xml:space="preserve">
+		<value>Отправить СМС</value>
+	</data>
+	<data name="U/P/CP/PasswordSMSForm:Title" xml:space="preserve">
+		<value>Смена пароля</value>
+	</data>
+	<data name="U/P/CP/PasswordSMSForm:Code" xml:space="preserve">
+		<value>СМС код</value>
+	</data>
+	<data name="U/P/CP/PasswordSMSForm:Submit" xml:space="preserve">
+		<value>Изменить пароль</value>
+	</data>
+	<data name="U/C/CourseForm:Free" xml:space="preserve">
+		<value>Бесплатно</value>
+	</data>
+	<data name="U/C/CourseForm:Premium" xml:space="preserve">
+		<value>Премиум</value>
+	</data>
+	<data name="U/C/CourseForm:Warning:Premium" xml:space="preserve">
+		<value>Пожалуйста, купите премиум подписку</value>
+	</data>
 </root>

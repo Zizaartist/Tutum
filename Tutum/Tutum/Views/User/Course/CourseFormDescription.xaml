@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vms="clr-namespace:Tutum.ViewModels"
+             xmlns:strres="clr-namespace:Tutum.StaticValues.StringResources"
              x:Class="Tutum.Views.User.Course.CourseFormDescription"
              BackgroundColor="{StaticResource Background}"
              Shell.BackgroundColor="{StaticResource Black}"
-             Title="{Binding Source={x:Reference Title}, Path=Text}" NavigationPage.HasNavigationBar="True">
+             Title="{Binding Source={x:Reference Title}, Path=Text}">
     <ContentPage.BindingContext>
         <vms:LessonsViewModel/>
     </ContentPage.BindingContext>

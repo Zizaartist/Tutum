@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Tutum.Interfaces;
 using Tutum.Models;
 using Tutum.StaticValues;
+using Tutum.StaticValues.StringResources;
 using Tutum.Views.User.Profile;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -64,17 +65,17 @@ namespace Tutum.ViewModels.ChangePassword
                 var result = await response.Content.ReadAsStringAsync();
                 var error = JsonConvert.DeserializeObject<ErrorModel>(result);
 
-                await Shell.Current.DisplayAlert("Error", error.errorText, "Ok");
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, error.errorText, "Ok");
             }
             else
             {
-                await Shell.Current.DisplayAlert("Error", "Ошибка при обработке запроса", "Ok");
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, AppResources.Alert_Error_NetworkException, "Ok");
             }
         }
 
         private void HandleError(Exception e)
         {
-            Shell.Current.DisplayAlert("Error", $"UnhandledException - {e}", "Ok");
+            Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, $"{AppResources.Alert_Error_UnhandledException} - {e}", "Ok");
         }
     }
 }

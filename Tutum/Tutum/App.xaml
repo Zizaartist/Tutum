@@ -28,7 +28,7 @@
         <Style x:Key="ButtonTransparent" TargetType="Button">
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="TextColor" Value="{DynamicResource WhiteText}"/>
-            <Setter Property="WidthRequest" Value="230"/>
+            <Setter Property="WidthRequest" Value="400"/>
             <Setter Property="HeightRequest" Value="45"/>
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
