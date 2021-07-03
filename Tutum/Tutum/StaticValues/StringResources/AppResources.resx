@@ -133,4 +133,165 @@
     <value>Registration</value>
     <comment>Text on button</comment>
   </data>
+  <data name="R/LoginForm:Title" xml:space="preserve">
+    <value>Login</value>
+    <comment>Text on navigation bar</comment>
+  </data>
+  <data name="R/RegistrationForm:Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>Placeholder</comment>
+  </data>
+  <data name="R/RegistrationForm:Password" xml:space="preserve">
+    <value>Password</value>
+    <comment>Placeholder</comment>
+  </data>
+  <data name="R/RegistrationForm:Phone" xml:space="preserve">
+    <value>Phone</value>
+    <comment>Placeholder</comment>
+  </data>
+  <data name="R/RegistrationForm:PrivacyPolicy" xml:space="preserve">
+    <value>Privacy policy</value>
+    <comment>Text link</comment>
+  </data>
+  <data name="R/RegistrationForm:RepeatPassword" xml:space="preserve">
+    <value>Repeat password</value>
+    <comment>Placeholder</comment>
+  </data>
+  <data name="R/RegistrationForm:Submit" xml:space="preserve">
+    <value>Submit</value>
+    <comment>Text on button</comment>
+  </data>
+  <data name="R/RegistrationForm:Title" xml:space="preserve">
+    <value>Registration</value>
+    <comment>Text on navigation bar</comment>
+  </data>
+  <data name="R/RegistratonFinalizeForm:SmsCode" xml:space="preserve">
+    <value>SMS code</value>
+    <comment>Placeholder</comment>
+  </data>
+  <data name="R/RegistratonFinalizeForm:Submit" xml:space="preserve">
+    <value>Finish registration</value>
+    <comment>Text on button</comment>
+  </data>
+  <data name="R/RegistratonFinalizeForm:Title" xml:space="preserve">
+    <value>Finishing registration</value>
+    <comment>Text on navigation bar</comment>
+  </data>
+  <data name="Alert:Error:Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="R/LoginForm:Error:InvalidCredentials" xml:space="preserve">
+    <value>Invalid login and/or password</value>
+  </data>
+  <data name="Alert:Error:NetworkException" xml:space="preserve">
+    <value>Network error occured</value>
+  </data>
+  <data name="Alert:Error:UnhandledException" xml:space="preserve">
+    <value>Unexpected error occured</value>
+  </data>
+  <data name="Alert:Warning:Title" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="U/M/MainForm:TitleLabel" xml:space="preserve">
+    <value>Tutum Fitness</value>
+  </data>
+  <data name="U/M/MainForm:DescriptionLabel" xml:space="preserve">
+    <value>The best agility and abs training tools You need only 2 sq.m on the floor and gravity</value>
+  </data>
+  <data name="U/M/MainForm:Buy" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="Shell:Main" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="Shell:Course" xml:space="preserve">
+    <value>Course</value>
+  </data>
+  <data name="Shell:Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="U/P/ProfileForm:NameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="U/P/ProfileForm:NamePlaceholder" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="U/P/ProfileForm:PhoneLabel" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="U/P/ProfileForm:PhonePlaceholder" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="U/P/ProfileForm:LanguageLabel" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="U/P/ProfileForm:LanguagePicker" xml:space="preserve">
+    <value>Select language</value>
+  </data>
+  <data name="U/P/ProfileForm:Password" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="U/P/ProfileForm:PhoneButton" xml:space="preserve">
+    <value>Change Phone Number</value>
+  </data>
+  <data name="U/P/ProfileForm:Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="U/P/CN/NumberForm:Title" xml:space="preserve">
+    <value>Changing phone number</value>
+  </data>
+  <data name="U/P/CN/NumberForm:Phone" xml:space="preserve">
+    <value>New phone number</value>
+  </data>
+  <data name="U/P/CN/NumberForm:Submit" xml:space="preserve">
+    <value>Send validation SMS</value>
+  </data>
+  <data name="U/P/CN/NumberSmsForm:Title" xml:space="preserve">
+    <value>Changing phone number</value>
+  </data>
+  <data name="U/P/CN/NumberSmsForm:Code" xml:space="preserve">
+    <value>SMS code</value>
+  </data>
+  <data name="U/P/CN/NumberSmsForm:Submit" xml:space="preserve">
+    <value>Change phone number</value>
+  </data>
+  <data name="U/P/CP/PasswordForm:Title" xml:space="preserve">
+    <value>Changing Password</value>
+  </data>
+  <data name="U/P/CP/PasswordForm:Password" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="U/P/CP/PasswordForm:PasswordRepeated" xml:space="preserve">
+    <value>Password repeated</value>
+  </data>
+  <data name="U/P/CP/PasswordForm:Submit" xml:space="preserve">
+    <value>Send SMS</value>
+  </data>
+  <data name="U/P/CP/PasswordSMSForm:Title" xml:space="preserve">
+    <value>Changing Password</value>
+  </data>
+  <data name="U/P/CP/PasswordSMSForm:Code" xml:space="preserve">
+    <value>SMS code</value>
+  </data>
+  <data name="U/P/CP/PasswordSMSForm:Submit" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="U/C/CourseForm:Free" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="U/C/CourseForm:Premium" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="U/C/CourseForm:Warning:Premium" xml:space="preserve">
+    <value>Please, buy premium account</value>
+  </data>
+  <data name="U/P/ProfileForm:Warning:Language" xml:space="preserve">
+    <value>Are you sure you want to change a language to {0}? Restart is required</value>
+  </data>
+  <data name="Alert:No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Alert:Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
 </root>

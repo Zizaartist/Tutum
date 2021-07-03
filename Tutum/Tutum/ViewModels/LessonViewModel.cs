@@ -6,6 +6,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Tutum.Models;
 using Tutum.StaticValues;
+using Tutum.StaticValues.StringResources;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -52,7 +53,7 @@ namespace Tutum.ViewModels
 
         public void HandleError(Exception e)
         {
-            App.Current.MainPage.DisplayAlert("Error", $"Exception - {e}", "Ok");
+            App.Current.MainPage.DisplayAlert(AppResources.Alert_Error_Title, $"{AppResources.Alert_Error_UnhandledException} - {e}", "Ok");
         }
     }
 }

@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tutum.Views.User.Profile.ChangeNumber.NumberSmsForm"
              xmlns:vms="clr-namespace:Tutum.ViewModels.ChangeNumber"
+             xmlns:strres="clr-namespace:Tutum.StaticValues.StringResources"
+             x:Class="Tutum.Views.User.Profile.ChangeNumber.NumberSmsForm"
              BackgroundColor="{StaticResource Background}"
-             Title="Changing phone number"
-             NavigationPage.HasNavigationBar="False"
-             NavigationPage.HasBackButton="False">
+             Title="{x:Static strres:AppResources.U_P_CN_NumberSmsForm_Title}">
     <ContentPage.BindingContext>
         <vms:SmsViewModel/>
     </ContentPage.BindingContext>
@@ -21,9 +20,9 @@
                    Text="{Binding Code, Mode=TwoWay}"
                    MaxLength="4"
                    Keyboard="Numeric"
-                   Placeholder="SMS code"/>
+                   Placeholder="{x:Static strres:AppResources.U_P_CN_NumberSmsForm_Code}"/>
             <Button Style="{StaticResource ButtonStandart}"
-                    Text="Change phone number"
+                    Text="{x:Static strres:AppResources.U_P_CN_NumberSmsForm_Submit}"
                     Command="{Binding ChangeNumberCommand}"/>
         </StackLayout>
     </ContentPage.Content>

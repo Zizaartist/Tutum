@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tutum.StaticValues;
+using Tutum.StaticValues.StringResources;
 using Tutum.Views.Registration;
 using Tutum.Views.User.Profile.ChangeNumber;
 using Tutum.Views.User.Profile.ChangePassword;

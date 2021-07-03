@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Tutum.Models;
 using Tutum.StaticValues;
+using Tutum.StaticValues.StringResources;
 using Tutum.Views.User.Profile.ChangeNumber;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -50,15 +51,27 @@ namespace Tutum.ViewModels.ChangeNumber
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", await SecureStorage.GetAsync(StorageKeys.TOKEN));
 
-            var response = await client.PostAsync($"{ApiStrings.HOST}{ApiStrings.AUTH_SMS_CHECK}?phone={NewNumber}", null);
-            response.EnsureSuccessStatusCode();
+            var response = await client.PostAsync($"{ApiStrings.HOST}{ApiStrings.AUTH_SMS_CHECK}?phone={NewNumber}&registrationCheck=true", null);
+            if (response.IsSuccessStatusCode)
+            {
+                await Shell.Current.GoToAsync($"{nameof(NumberSmsForm)}?{nameof(SmsViewModel.NewNumber)}={NewNumber}");
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                var error = JsonConvert.DeserializeObject<ErrorModel>(result);
 
-            await Shell.Current.GoToAsync($"{nameof(NumberSmsForm)}?{nameof(SmsViewModel.NewNumber)}={NewNumber}");
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, error.errorText, "Ok");
+            }
+            else
+            {
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, AppResources.Alert_Error_NetworkException, "Ok");
+            }
         }
 
         private void HandleError(Exception e)
         {
-            Shell.Current.DisplayAlert("Error", $"UnhandledException - {e}", "Ok");
+            Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, $"{AppResources.Alert_Error_UnhandledException} - {e}", "Ok");
         }
     }
 }

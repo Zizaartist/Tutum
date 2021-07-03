@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vms="clr-namespace:Tutum.ViewModels"
+             xmlns:strres="clr-namespace:Tutum.StaticValues.StringResources"
              x:Class="Tutum.Views.User.Course.CourseForm"
              BackgroundColor="{StaticResource Background}">
     <Shell.BackgroundColor>
@@ -67,13 +68,13 @@
                                         <DataTrigger TargetType="Button"
                                                      Binding="{Binding IsPremiumOnly}"
                                                      Value="True">
-                                            <Setter Property="Text" Value="Премиум"/>
+                                            <Setter Property="Text" Value="{x:Static strres:AppResources.U_C_CourseForm_Premium}"/>
                                             <Setter Property="TextColor" Value="#D3131F"/>
                                         </DataTrigger>
                                         <DataTrigger TargetType="Button"
                                                      Binding="{Binding IsPremiumOnly}"
                                                      Value="False">
-                                            <Setter Property="Text" Value="Бесплатно"/>
+                                            <Setter Property="Text" Value="{x:Static strres:AppResources.U_C_CourseForm_Free}"/>
                                             <Setter Property="TextColor" Value="#44C149"/>
                                         </DataTrigger>
                                     </Button.Triggers>

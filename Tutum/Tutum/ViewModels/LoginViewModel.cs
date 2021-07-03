@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tutum.Models;
 using Tutum.StaticValues;
+using Tutum.StaticValues.StringResources;
 using Tutum.Views.User.Main;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -95,17 +96,17 @@ namespace Tutum.ViewModels
             }
             else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                await Shell.Current.DisplayAlert("Error", "Неверный логин и/или пароль", "Ok");
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, AppResources.R_LoginForm_Error_InvalidCredentials, "Ok");
             }
             else
             {
-                await Shell.Current.DisplayAlert("Error", $"Unhandled exception", "Ok");
+                await Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, AppResources.Alert_Error_NetworkException, "Ok");
             }
         }
 
         public void HandleError(Exception e) 
         {
-            Shell.Current.DisplayAlert("Error", $"Exception - {e}", "Ok");
+            Shell.Current.DisplayAlert(AppResources.Alert_Error_Title, $"{AppResources.Alert_Error_UnhandledException} - {e}", "Ok");
         }
     }
 }

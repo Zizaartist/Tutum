@@ -4,12 +4,6 @@ using System.Text;
 
 namespace Tutum.StaticValues.StringResources
 {
-    public enum EnumLanguages 
-    {
-        english,
-        russian
-    }
-
     public class AvailableLanguages
     {
         public static List<string> Languages = new List<string> 
@@ -18,10 +12,16 @@ namespace Tutum.StaticValues.StringResources
             "Русский"
         };
 
-        public static Dictionary<string, EnumLanguages> StringToEnum = new Dictionary<string, EnumLanguages> 
+        public static Dictionary<string, string> StringToStandart = new Dictionary<string, string> 
         {
-            { "English", EnumLanguages.english },
-            { "Русский", EnumLanguages.russian }
+            { "English", "en" },
+            { "Русский", "ru-RU" }
+        };
+
+        public static Dictionary<string, string> StandartToString = new Dictionary<string, string>
+        {
+            { "en", "English" },
+            { "ru-RU", "Русский" }
         };
     }
 }
