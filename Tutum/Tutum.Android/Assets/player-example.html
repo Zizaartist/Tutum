@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Video.js | HTML5 Video Player</title>
+    <link href="video-js.css" rel="stylesheet">
+    <script src="video.js"></script>
+    <script src="videojs-http-streaming.js"></script>
+
+</head>
+<body style="margin: 0px;">
+
+  <video-js id=example-video class="video-js" data-setup='{"fluid": true}' controls>
+    <source
+       src="https://tutumvideoservices-jpwe.streaming.media.azure.net/84966fbf-602b-4ffc-8e80-656c052fc0e3/hnxctgqp.ism/manifest(format=m3u8-aapl)"
+       type="application/x-mpegURL">
+  </video-js>
+  
+  <script>
+    var player = videojs('example-video');
+    player.play();
+  </script>
+</body>
+
+</html>
+

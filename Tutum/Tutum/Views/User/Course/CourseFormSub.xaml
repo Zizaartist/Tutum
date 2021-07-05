@@ -13,13 +13,7 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout x:Name="Wrapper">
-            <xct:MediaElement x:Name="mediaElement"
-                              AutoPlay="True"
-                              Source="{Binding Lesson.VideoUrl}"
-                              ShowsPlaybackControls="True"
-                              HeightRequest="300"
-                              VerticalOptions="Center"
-                              IsLooping="True"/>
+            <WebView x:Name="WebPlayer" HorizontalOptions="FillAndExpand" HeightRequest="250"/>
             <Label Style="{StaticResource Label14}"
                    Margin="20,0,20,0"
                    FontSize="16"
