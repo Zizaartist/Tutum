@@ -19,6 +19,13 @@ namespace Tutum.Views.User.Course
             userVM.GetUserDataCommand.Execute(null);
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            userVM.GetUserDataCommand.Execute(null);
+        }
+
         private async void CourseCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.CurrentSelection.Any())

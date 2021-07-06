@@ -4,6 +4,7 @@ using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Tutum.Interfaces;
 using Tutum.Models;
 using Tutum.StaticValues;
 using Tutum.StaticValues.StringResources;
@@ -91,6 +92,9 @@ namespace Tutum.ViewModels
                 var token = JsonConvert.DeserializeObject<TokenModel>(result);
 
                 await SecureStorage.SetAsync(StorageKeys.TOKEN, token.AccessToken);
+
+                var userService = DependencyService.Get<IUserDataService>();
+                userService.GetRemoteData(); //получаем новые данные пользователя асинхронно при каждой авторизации
 
                 await Shell.Current.GoToAsync($"//{nameof(MainForm)}");
             }

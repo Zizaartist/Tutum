@@ -18,8 +18,7 @@
                               Source="{Binding Lesson.VideoUrl}"
                               ShowsPlaybackControls="True"
                               HeightRequest="300"
-                              VerticalOptions="Center"
-                              IsLooping="True"/>
+                              VerticalOptions="Center"/>
             <Label Style="{StaticResource Label14}"
                    Margin="20,0,20,0"
                    FontSize="16"
