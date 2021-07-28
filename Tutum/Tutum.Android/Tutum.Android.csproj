@@ -217,10 +217,10 @@
     <AndroidResource Include="Resources\drawable\T1.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\raw\TutumTiser.mp4" />
+    <AndroidResource Include="Resources\drawable\K11.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\K11.png" />
+    <Folder Include="Resources\raw\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

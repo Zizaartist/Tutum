@@ -62,7 +62,10 @@ namespace Tutum.ViewModels
 
             if (token != null) 
             {
-                await Shell.Current.GoToAsync($"//{nameof(MainForm)}");
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await Shell.Current.GoToAsync($"//{nameof(MainForm)}");
+                });
             }
 
             IsBusy = false;

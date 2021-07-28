@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:vms="clr-namespace:Tutum.ViewModels"
              xmlns:strres="clr-namespace:Tutum.StaticValues.StringResources"
              x:Class="Tutum.Views.User.Main.MainForm"
              BackgroundColor="{StaticResource Background}">
@@ -18,11 +19,14 @@
                    VerticalOptions="Center"/>
         </Grid>
     </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vms:MainViewModel x:Name="ViewModel"/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <xct:MediaElement x:Name="mediaElement"
                               AutoPlay="True"
-                              Source="ms-appx:///TutumTiser.mp4"
+                              Source="{Binding Source}"
                               ShowsPlaybackControls="True"
                               HeightRequest="300"
                               VerticalOptions="Center"

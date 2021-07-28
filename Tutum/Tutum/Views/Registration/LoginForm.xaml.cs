@@ -13,11 +13,6 @@ namespace Tutum.Views.Registration
             InitializeComponent();
         }
 
-        private void Login_Clicked(object sender, EventArgs e)
-        {
-            Shell.Current.GoToAsync($"//{nameof(MainForm)}");
-        }
-
         private void Registration_Clicked(object sender, EventArgs e)
         {
             Shell.Current.GoToAsync(nameof(RegistrationForm));

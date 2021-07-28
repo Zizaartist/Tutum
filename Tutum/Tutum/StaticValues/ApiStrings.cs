@@ -9,6 +9,7 @@ namespace Tutum.StaticValues
         public const string HOST = "https://tutumapi.azurewebsites.net/";
         public const string BLOB = "https://tutumstorage.blob.core.windows.net/images/";
         public const string ENDPOINT = "https://tutumvideoservices-jpwe.streaming.media.azure.net/";
+        public const string TEASER_PATH = "https://tutumvideoservices-jpwe.streaming.media.azure.net/8596759d-e57b-4027-aa45-0dec8788ea87/TutumTiser.mp4";
 
         #region courses
 
